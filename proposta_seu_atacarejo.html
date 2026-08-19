@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial • Seu Atacarejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #990000;
+            --primary-dark: #660000;
+            --primary-light: #CC0000;
+            --secondary: #FFCC00;
+            --secondary-dark: #E6B800;
+            --accent: #E63946;
+            --bg-cream: #FFFDF7;
+            --bg-card: #FFFFFF;
+            --bg-dark: #500000;
+            --text-dark: #1F2937;
+            --text-muted: #4B5563;
+            --text-light: #F9FAFB;
+            --border-color: #F3F4F6;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0F172A;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 20px 0;
+        }
+
+        .slide-container {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            background: var(--bg-cream);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Slide Header */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 40px 12px 40px;
+        }
+
+        .header-logo-box {
+            background: #FFFFFF;
+            padding: 6px 14px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            border: 1px solid #E5E7EB;
+        }
+
+        .header-logo-img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .category-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .page-counter {
+            font-size: 12px;
+            font-weight: 700;
+            color: #9CA3AF;
+        }
+
+        /* Slide Content */
+        .slide-body {
+            padding: 12px 40px 40px 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1.slide-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        p.slide-subtitle {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        /* Slide 1 - Cover */
+        .cover-slide {
+            background: linear-gradient(135deg, #660000 0%, #400000 100%);
+            color: white;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            justify-content: space-between;
+        }
+
+        .cover-shapes {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, var(--secondary) 0%, var(--primary) 70%);
+            border-radius: 50%;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        .cover-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .cover-logo-box {
+            background: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .cover-logo-img {
+            height: 58px;
+            width: auto;
+            display: block;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .cover-title {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            max-width: 650px;
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            color: #F3F4F6;
+            margin-bottom: 36px;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+
+        .cover-callout {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 36px;
+            max-width: 650px;
+        }
+
+        .cover-callout-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .cover-callout-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cover-callout-tags {
+            font-size: 12px;
+            color: #D1D5DB;
+        }
+
+        .cover-footer {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        .cover-meta label {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary);
+        }
+
+        /* Slide 2 - Grid & Cards */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #E5E7EB;
+        }
+
+        .card-dark {
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+        }
+
+        .card-yellow {
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+        }
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .card-dark .card-title {
+            color: var(--secondary);
+        }
+
+        .numbered-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 13px;
+        }
+
+        .number-badge {
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-weight: 800;
+            font-size: 11px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pos-box {
+            background: #FFFBEB;
+            border: 1px solid var(--secondary);
+            border-radius: var(--radius-md);
+            padding: 16px 24px;
+            margin-top: auto;
+        }
+
+        .pos-box label {
+            display: block;
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .pos-box p {
+            font-size: 13px;
+            color: #78350F;
+            font-weight: 500;
+        }
+
+        /* Mockup Screens (Slide 3) */
+        .mockup-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 10px 0;
+        }
+
+        .phone-mockup {
+            width: 270px;
+            height: 480px;
+            background: #111827;
+            border-radius: 36px;
+            padding: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            border: 4px solid #374151;
+            position: relative;
+        }
+
+        .phone-screen {
+            background: #F9FAFB;
+            width: 100%;
+            height: 100%;
+            border-radius: 28px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            font-size: 11px;
+        }
+
+        .app-header {
+            background: var(--primary);
+            color: white;
+            padding: 12px 12px 8px 12px;
+        }
+
+        .app-brand-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .app-logo-img {
+            height: 24px;
+            background: white;
+            padding: 3px 8px;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        .app-search {
+            background: white;
+            border-radius: 12px;
+            padding: 6px 10px;
+            color: #9CA3AF;
+            font-size: 9px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .app-body {
+            padding: 8px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .app-banner {
+            background: linear-gradient(135deg, var(--primary), #800000);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .app-banner h4 {
+            color: var(--secondary);
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        .app-banner p {
+            font-size: 8px;
+            opacity: 0.9;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 6px;
+            border: 1px solid #E5E7EB;
+            text-align: center;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 45px;
+            background: #F3F4F6;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9CA3AF;
+            font-weight: 700;
+            font-size: 8px;
+        }
+
+        .product-title {
+            font-weight: 700;
+            font-size: 9px;
+            line-height: 1.1;
+            margin-bottom: 2px;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .product-price {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 10px;
+        }
+
+        .mobile-first-badge {
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .mobile-first-tag {
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        /* Slide 4 Admin Dashboard */
+        .admin-dashboard-mockup {
+            background: white;
+            border-radius: var(--radius-md);
+            border: 1px solid #E5E7EB;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .admin-topbar {
+            background: #1F2937;
+            color: white;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .admin-brand {
+            font-weight: 800;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-logo-img {
+            height: 26px;
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            object-fit: contain;
+        }
+
+        .admin-kanban {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 16px;
+            background: #F9FAFB;
+        }
+
+        .kanban-col {
+            background: #F3F4F6;
+            border-radius: var(--radius-sm);
+            padding: 10px;
+            font-size: 11px;
+        }
+
+        .kanban-col-header {
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .kanban-card {
+            background: white;
+            border-radius: 6px;
+            padding: 8px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 6px;
+            border-left: 3px solid var(--primary);
+        }
+
+        /* Slide 5 Escopo */
+        .escopo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .escopo-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 20px;
+            border: 1px solid #E5E7EB;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .escopo-num {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .escopo-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .escopo-list {
+            list-style: none;
+        }
+
+        .escopo-list li {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .escopo-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .banner-included {
+            background: var(--primary-dark);
+            color: white;
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        .banner-included label {
+            display: block;
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .banner-included p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        /* Slide 6 Roadmap */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 24px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            bottom: 10px;
+            width: 3px;
+            background: #E5E7EB;
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .timeline-node {
+            position: absolute;
+            left: -40px;
+            top: 2px;
+            width: 32px;
+            height: 32px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            box-shadow: 0 0 0 4px var(--bg-cream);
+        }
+
+        .timeline-content {
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            border: 1px solid #E5E7EB;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .timeline-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Slide 7 Investimento */
+        .table-invest {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-bottom: 16px;
+            background: white;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .table-invest tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .table-invest td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #F3F4F6;
+        }
+
+        .table-invest td:last-child {
+            text-align: right;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .price-highlight-card {
+            background: var(--primary-dark);
+            color: white;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .price-old {
+            font-size: 18px;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+
+        .price-main {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .price-econ {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer & Slide Nav */
+        .footer-note {
+            font-size: 10px;
+            color: #9CA3AF;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .slide-container {
+                max-width: 100%;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+                page-break-after: always;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: CAPA -->
+    <div class="slide-container">
+        <div class="slide-body cover-slide">
+            <div class="cover-shapes"></div>
+            <div>
+                <div class="cover-top-bar">
+                    <div class="cover-logo-box">
+                        <img src="logo_tight.png" alt="Seu Atacarejo Horizonte" class="cover-logo-img">
+                    </div>
+                    <div class="cover-badge">PROPOSTA COMERCIAL • 2026</div>
+                </div>
+                <h1 class="cover-title">Seu atacarejo mais perto do cliente</h1>
+                <p class="cover-subtitle">Aplicativo de compras, operação digital e relacionamento por WhatsApp — com a identidade do Seu Atacarejo.</p>
+                
+                <div class="cover-callout">
+                    <div class="cover-callout-tag">UMA NOVA FRENTE DE VENDAS</div>
+                    <div class="cover-callout-title">Compra simples e econômica para o cliente. Gestão clara para a equipe.</div>
+                    <div class="cover-callout-tags">Catálogo (Varejo & Atacado) • pedidos • separação • entregas / retirada • comunicação automática</div>
+                </div>
+            </div>
+
+            <div class="cover-footer">
+                <div class="cover-meta">
+                    <label>EMPRESA ALVO</label>
+                    <strong>Seu Atacarejo (Horizonte - CE)</strong>
+                    <div style="font-size: 11px; color: var(--secondary); margin-top: 2px; font-weight: 700;">Em atenção ao Sr. Walmir</div>
+                </div>
+                <div class="cover-meta">
+                    <label>REPRESENTANTE COMERCIAL</label>
+                    <strong>Marcio Aldízio</strong>
+                </div>
+                <div style="text-align: right; opacity: 0.7; font-size: 11px;">
+                    Documento confidencial<br>Demonstração personalizável
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: OPORTUNIDADE -->
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="header-logo-box">
+                <img src="logo_tight.png" alt="Seu Atacarejo" class="header-logo-img">
+            </div>
+            <span class="category-tag">OPORTUNIDADE</span>
+            <span class="page-counter">02 / 07</span>
+        </div>
+        <div class="slide-body">
+            <h1 class="slide-title">Da gôndola para o celular, sem perder a proximidade e a economia</h1>
+            <p class="slide-subtitle">Uma operação digital própria transforma conveniência em recorrência e mantém o relacionamento sob controle do Seu Atacarejo.</p>
+
+            <div class="grid-2">
+                <div class="card card-yellow">
+                    <div class="card-title">O QUE MUDA NA PRÁTICA</div>
+                    <div class="numbered-item"><div class="number-badge">01</div><div>O cliente compra onde já está: no celular.</div></div>
+                    <div class="numbered-item"><div class="number-badge">02</div><div>A equipe recebe pedidos organizados em uma fila única.</div></div>
+                    <div class="numbered-item"><div class="number-badge">03</div><div>Cada avanço logístico gera comunicação automática via WhatsApp.</div></div>
+                    <div class="numbered-item"><div class="number-badge">04</div><div>O atacarejo cria um canal próprio, sem depender só de marketplaces.</div></div>
+                </div>
+
+                <div class="card card-dark">
+                    <div class="card-title">JORNADA INTEGRADA</div>
+                    <div class="numbered-item"><div class="number-badge">1</div><div><strong>Cliente escolhe</strong><br><span style="opacity:0.8; font-size:11px;">Vitrine intuitiva, ofertas de atacado e sacola simples</span></div></div>
+                    <div class="numbered-item"><div class="number-badge">2</div><div><strong>Loja prepara</strong><br><span style="opacity:0.8; font-size:11px;">Separação ágil de volumes e substituições</span></div></div>
+                    <div class="numbered-item"><div class="number-badge">3</div><div><strong>Pedido avança</strong><br><span style="opacity:0.8; font-size:11px;">Entrega / Retirada e notificações WhatsApp</span></div></div>
+                </div>
+            </div>
+
+            <div style="font-weight: 700; font-size: 14px; margin-bottom: 12px;">Valor percebido pelo cliente e pela operação</div>
+            <div class="grid-3" style="margin-bottom: 16px;">
+                <div class="card">
+                    <strong style="color: var(--primary);">Vender mais vezes</strong>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Um canal adicional aberto 24/7 para famílias e pequenos comerciantes.</p>
+                </div>
+                <div class="card">
+                    <strong style="color: var(--primary);">Atender com clareza</strong>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Status e pedidos organizados, sem chamados dispersos.</p>
+                </div>
+                <div class="card">
+                    <strong style="color: var(--primary);">Fidelizar com presença</strong>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Marca própria fortalecida na rotina de compras do cliente.</p>
+                </div>
+            </div>
+
+            <div class="pos-box">
+                <label>POSICIONAMENTO INSTITUCIONAL</label>
+                <p>Tecnologia com aparência profissional e atendimento próximo: o cliente reconhece a marca, compra com facilidade, aproveita "um horizonte de economia" e acompanha o pedido sem ruído.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: EXPERIÊNCIA DO CLIENTE -->
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="header-logo-box">
+                <img src="logo_tight.png" alt="Seu Atacarejo" class="header-logo-img">
+            </div>
+            <span class="category-tag">EXPERIÊNCIA DO CLIENTE</span>
+            <span class="page-counter">03 / 07</span>
+        </div>
+        <div class="slide-body">
+            <h1 class="slide-title">Uma compra que cabe na mão</h1>
+            <p class="slide-subtitle">Duas telas reais do sistema, apresentadas com a identidade visual proposta para o Seu Atacarejo.</p>
+
+            <div class="mockup-wrapper">
+                <!-- TELAS DO APP -->
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <div class="app-brand-row">
+                                <img src="logo_tight.png" alt="Seu Atacarejo" class="app-logo-img">
+                            </div>
+                            <div class="app-search">🔍 Buscar arroz, feijão, oferta...</div>
+                        </div>
+                        <div class="app-body">
+                            <div class="app-banner">
+                                <h4>Um Horizonte de Economia</h4>
+                                <p>Ofertas Especiais do Dia de Atacarejo</p>
+                            </div>
+                            <div class="product-grid">
+                                <div class="product-card">
+                                    <div class="product-img">ARROZ 5KG</div>
+                                    <div class="product-title">Arroz Tipo 1 5kg</div>
+                                    <div class="product-price">R$ 24,90</div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-img">LEITE CX</div>
+                                    <div class="product-title">Leite Integral Cx</div>
+                                    <div class="product-price">R$ 4,79</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <div class="app-brand-row">
+                                <img src="logo_tight.png" alt="Sacola" class="app-logo-img">
+                            </div>
+                        </div>
+                        <div class="app-body">
+                            <div style="font-weight: 700; margin-bottom: 6px; font-size: 10px;">Itens Selecionados</div>
+                            <div style="background: white; border-radius: 6px; padding: 6px; margin-bottom: 6px; border: 1px solid #E5E7EB;">
+                                <strong>1x Arroz Tipo 1 5kg</strong> - R$ 24,90
+                                <p style="font-size: 8px; color: #6B7280;">Obs: Embalagem intacta</p>
+                            </div>
+                            <div style="background: white; border-radius: 6px; padding: 6px; margin-bottom: 6px; border: 1px solid #E5E7EB;">
+                                <strong>12x Leite Integral Cx</strong> - R$ 57,48
+                                <p style="font-size: 8px; color: #059669;">Preço de Atacado Aplicado!</p>
+                            </div>
+                            <div style="margin-top: 15px; background: #FEF3C7; padding: 8px; border-radius: 6px; font-size: 9px; font-weight:700; color:#92400E;">
+                                Modalidade: Retirada no Atacarejo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-first-badge">
+                <span class="mobile-first-tag">MOBILE FIRST</span>
+                <span>Botões maiores, contraste acessível, linguagem direta e menos etapas entre a intenção e a compra.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: OPERAÇÃO DO GESTOR -->
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="header-logo-box">
+                <img src="logo_tight.png" alt="Seu Atacarejo" class="header-logo-img">
+            </div>
+            <span class="category-tag">OPERAÇÃO DO GESTOR</span>
+            <span class="page-counter">04 / 07</span>
+        </div>
+        <div class="slide-body">
+            <h1 class="slide-title">O pedido avança no painel — e o cliente acompanha</h1>
+            <p class="slide-subtitle">Uma central única para visualizar demanda, separar produtos, organizar entregas/retiradas e acompanhar a loja digital.</p>
+
+            <div class="admin-dashboard-mockup">
+                <div class="admin-topbar">
+                    <div class="admin-brand">
+                        <img src="logo_tight.png" alt="Seu Atacarejo Gestão" class="admin-logo-img">
+                        <span>Central de Pedidos • Gestão Horizonte</span>
+                    </div>
+                    <span style="background: var(--primary); padding: 2px 8px; border-radius: 10px; font-size: 10px;">Operação Online</span>
+                </div>
+                <div class="admin-kanban">
+                    <div class="kanban-col">
+                        <div class="kanban-col-header"><span>Novos</span> <span>1</span></div>
+                        <div class="kanban-card">#1042 • Maria S.<br><small>R$ 184,50 (Retirada)</small></div>
+                    </div>
+                    <div class="kanban-col">
+                        <div class="kanban-col-header"><span>Separação</span> <span>2</span></div>
+                        <div class="kanban-card">#1040 • Lanchonete X<br><small>R$ 420,00 (Atacado)</small></div>
+                    </div>
+                    <div class="kanban-col">
+                        <div class="kanban-col-header"><span>Prontos</span> <span>0</span></div>
+                    </div>
+                    <div class="kanban-col">
+                        <div class="kanban-col-header"><span>Entrega / Rota</span> <span>1</span></div>
+                        <div class="kanban-card">#1038 • João P.<br><small>R$ 95,20 (Entrega)</small></div>
+                    </div>
+                    <div class="kanban-col">
+                        <div class="kanban-col-header"><span>Finalizados</span> <span>14</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="number-badge" style="margin-bottom: 8px;">01</div>
+                    <strong>Fila organizada</strong>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Novos, separação, prontos, entrega e finalizados.</p>
+                </div>
+                <div class="card">
+                    <div class="number-badge" style="margin-bottom: 8px;">02</div>
+                    <strong>Ação com contexto</strong>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Pedido, itens (atacado/varejo) e observações visíveis.</p>
+                </div>
+                <div class="card">
+                    <div class="number-badge" style="margin-bottom: 8px;">03</div>
+                    <strong>Comunicação WhatsApp</strong>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Notificações automáticas a cada mudança de etapa.</p>
+                </div>
+            </div>
+
+            <div class="pos-box">
+                <label>RESULTADO OPERACIONAL</label>
+                <p>Mais previsibilidade para a equipe de separação e menos perguntas repetidas sobre o andamento do pedido.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: ESCOPO DA ENTREGA -->
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="header-logo-box">
+                <img src="logo_tight.png" alt="Seu Atacarejo" class="header-logo-img">
+            </div>
+            <span class="category-tag">ESCOPO DA ENTREGA</span>
+            <span class="page-counter">05 / 07</span>
+        </div>
+        <div class="slide-body">
+            <h1 class="slide-title">Um projeto completo, implantado e acompanhado</h1>
+            <p class="slide-subtitle">A proposta cobre a personalização da experiência, a preparação da operação e o primeiro ano de sustentação.</p>
+
+            <div class="escopo-grid">
+                <div class="escopo-card">
+                    <div class="escopo-num">01</div>
+                    <div class="escopo-title">Identidade e experiência</div>
+                    <ul class="escopo-list">
+                        <li>Cores, logo e linguagem Seu Atacarejo</li>
+                        <li>Ajustes mobile e acessibilidade</li>
+                        <li>Vitrine, sacola, cadastro e pedidos</li>
+                    </ul>
+                </div>
+
+                <div class="escopo-card">
+                    <div class="escopo-num">02</div>
+                    <div class="escopo-title">Operação e automação</div>
+                    <ul class="escopo-list">
+                        <li>Painel do gestor e fluxo logístico (Entrega / Retirada)</li>
+                        <li>Cadastro de produtos, preços por volume e ofertas</li>
+                        <li>Integração oficial Evolution / WhatsApp API</li>
+                    </ul>
+                </div>
+
+                <div class="escopo-card">
+                    <div class="escopo-num">03</div>
+                    <div class="escopo-title">Publicação e infraestrutura</div>
+                    <ul class="escopo-list">
+                        <li>Aplicativo Android na Google Play Store</li>
+                        <li>Servidor VPS dedicado, domínio, SSL e backups</li>
+                        <li>Monitoramento proativo do ambiente</li>
+                    </ul>
+                </div>
+
+                <div class="escopo-card">
+                    <div class="escopo-num">04</div>
+                    <div class="escopo-title">Adoção e continuidade</div>
+                    <ul class="escopo-list">
+                        <li>Treinamento operacional da equipe</li>
+                        <li>Suporte local presencial por 30 dias</li>
+                        <li>Suporte corretivo e manutenção por 12 meses</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner-included">
+                <label>O QUE ESTÁ INCLUÍDO NO PRIMEIRO ANO</label>
+                <p>Hospedagem em VPS, certificado SSL, backups diários, suporte corretivo e melhorias gerais liberadas para a plataforma. Demandas exclusivas, novas integrações ou mudanças de escopo serão avaliadas separadamente.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: IMPLANTAÇÃO -->
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="header-logo-box">
+                <img src="logo_tight.png" alt="Seu Atacarejo" class="header-logo-img">
+            </div>
+            <span class="category-tag">IMPLANTAÇÃO</span>
+            <span class="page-counter">06 / 07</span>
+        </div>
+        <div class="slide-body">
+            <h1 class="slide-title">Da personalização à operação assistida</h1>
+            <p class="slide-subtitle">Um cronograma objetivo reduz risco, dá visibilidade à equipe e preserva tempo para validar a experiência antes do lançamento público.</p>
+
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="timeline-node">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Imersão</div>
+                        <div class="timeline-desc">Marca Seu Atacarejo, regras comerciais (varejo/atacado), raio de entrega, retirada e pagamentos.</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-node">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Personalização</div>
+                        <div class="timeline-desc">Identidade visual, catálogo inicial de produtos e mensagens da jornada WhatsApp.</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-node">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Integração</div>
+                        <div class="timeline-desc">API WhatsApp, servidor VPS, domínio, certificado SSL e publicação Android.</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-node">4</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Validação</div>
+                        <div class="timeline-desc">Testes práticos de compra, separação, entrega/retirada e correções prioritárias.</div>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-node">5</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Entrada em operação</div>
+                        <div class="timeline-desc">Treinamento prático da equipe, acompanhamento local e estabilização do sistema.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-yellow" style="margin-top: auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <label style="font-size: 11px; font-weight: 800; color: var(--primary); text-transform: uppercase;">PRAZO ESTIMADO</label>
+                        <div style="font-size: 28px; font-weight: 800; color: var(--primary-dark);">45 a 60 dias corridos</div>
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted); max-width: 350px;">
+                        Contados após aprovação, envio dos materiais da marca e validação das regras operacionais. Prazos de análise da Play Store dependem da plataforma.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: INVESTIMENTO -->
+    <div class="slide-container">
+        <div class="slide-header">
+            <div class="header-logo-box">
+                <img src="logo_tight.png" alt="Seu Atacarejo" class="header-logo-img">
+            </div>
+            <span class="category-tag">INVESTIMENTO</span>
+            <span class="page-counter">07 / 07</span>
+        </div>
+        <div class="slide-body">
+            <h1 class="slide-title">O valor acompanha a entrega — não apenas o software</h1>
+            <p class="slide-subtitle">A composição abaixo torna visível o trabalho de implantação, personalização, infraestrutura e acompanhamento incluído no pacote.</p>
+
+            <div class="grid-2" style="grid-template-columns: 1.3fr 1fr; align-items: start;">
+                <div>
+                    <table class="table-invest">
+                        <tr><td>Identidade visual e refinamento de UX</td><td>R$ 4.500</td></tr>
+                        <tr><td>Implantação e configuração inicial</td><td>R$ 4.000</td></tr>
+                        <tr><td>App, e-commerce e painel de gestão</td><td>R$ 9.500</td></tr>
+                        <tr><td>Integração WhatsApp / Evolution</td><td>R$ 3.500</td></tr>
+                        <tr><td>Publicação Android / Play Store</td><td>R$ 2.500</td></tr>
+                        <tr><td>VPS, SSL e backups diários • 12 meses</td><td>R$ 3.200</td></tr>
+                        <tr><td>Treinamento + suporte local • 30 dias</td><td>R$ 2.700</td></tr>
+                        <tr><td>Suporte corretivo e evolução • 12 meses</td><td>R$ 5.000</td></tr>
+                    </table>
+                </div>
+
+                <div>
+                    <div class="price-highlight-card">
+                        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; opacity: 0.8;">VALOR DE REFERÊNCIA</div>
+                        <div class="price-old">R$ 34.900</div>
+                        <div style="font-size: 11px; font-weight: 800; color: var(--secondary); margin-top: 8px;">CONDIÇÃO SEU ATACAREJO</div>
+                        <div class="price-main">R$ 29.900</div>
+                        <div class="price-econ">ECONOMIA DE R$ 5.000</div>
+                    </div>
+
+                    <div class="card card-yellow" style="margin-top: 12px; padding: 12px; font-size: 11px;">
+                        <strong style="color: var(--primary-dark); display: block; margin-bottom: 4px;">CONDIÇÃO SUGERIDA DE PAGAMENTO</strong>
+                        • 40% na contratação (R$ 11.960)<br>
+                        • 30% na homologação (R$ 8.970)<br>
+                        • 30% na entrega final (R$ 8.970)
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-4" style="margin-top: 10px;">
+                <div class="card" style="padding: 10px;"><strong style="font-size:11px;">Canal próprio</strong><p style="font-size:9px; color:var(--text-muted);">Marca e carteira 100% sob controle do atacarejo.</p></div>
+                <div class="card" style="padding: 10px;"><strong style="font-size:11px;">Implantação incluída</strong><p style="font-size:9px; color:var(--text-muted);">Personalização e publicação inclusas no pacote.</p></div>
+                <div class="card" style="padding: 10px;"><strong style="font-size:11px;">1º Ano protegido</strong><p style="font-size:9px; color:var(--text-muted);">Hospedagem, SSL e suporte pré-pagos por 1 ano.</p></div>
+                <div class="card" style="padding: 10px;"><strong style="font-size:11px;">Adoção acompanhada</strong><p style="font-size:9px; color:var(--text-muted);">Treinamento presencial e suporte de 30 dias.</p></div>
+            </div>
+
+            <div class="footer-note">
+                Validade: 15 dias • Em atenção ao Sr. Walmir • Cliente Alvo: Seu Atacarejo (Horizonte-CE) • Representante Comercial: Marcio Aldízio
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
